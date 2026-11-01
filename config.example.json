@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "sessionId": "session-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "heartbeatMinutes": 120,
+  "quietFrom": 1,
+  "quietTo": 7,
+  "eventLog": "",
+  "eventMarker": "",
+  "prompt": "轮到你了，开口吧。想说什么都行——刚才想到的、今天碰上的、刷到的一句话，或者就只是叫一声。不用等有事才说话，也不用凑话题。"
+}

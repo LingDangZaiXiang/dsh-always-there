@@ -1,0 +1,15 @@
+# Bundle patch for dsh-always-there.
+#
+# 装完就能用：默认关着（enabled: false），先填好 sessionId 再打开。
+# 也可以在 profile 的 cordis.patch.yml 里按 id 覆盖这些字段。
+- insert:
+    - id: dsh-always-there
+      name: dsh-always-there
+      config:
+        enabled: false
+        sessionId: ''
+        heartbeatMinutes: 120
+        quietFrom: 1
+        quietTo: 7
+        eventLog: ''
+        eventMarker: ''

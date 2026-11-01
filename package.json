@@ -1,0 +1,32 @@
+{
+  "name": "dsh-always-there",
+  "version": "0.1.0",
+  "description": "一直在你身边。Let a DSH agent wake itself up: an event plus a gentle heartbeat, and the agent decides whether to speak. It only rings the bell; it never puts words in your mouth.",
+  "type": "module",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "config.example.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "proactive",
+    "heartbeat"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
