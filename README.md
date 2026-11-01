@@ -91,3 +91,22 @@ dsh plugin --profile <profile> add dsh-always-there
 const raw = String(text ?? '').trim()
 if (/^(silent|\[静默\])\W*$/i.test(raw)) return
 ```
+---
+
+## ⚠️ 装完先做这件事
+
+**装上之后它是关着的。** 不填 `sessionId` 就什么也不会发生——不是坏了，是没告诉它该叫醒谁。
+
+在你的 profile 里按 `id` 覆盖这几个字段：
+
+```yaml
+- id: dsh-always-there
+  config:
+    enabled: true                                    # 打开
+    sessionId: session-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   # 必填：要叫醒哪个会话
+    heartbeatMinutes: 120                            # 多久叫一次
+```
+
+`sessionId` 去哪找：`~/.dsh/sessions/<工作区目录>/` 底下那个 `session-` 开头的文件夹名，就是它。
+
+`profile` 是 `desktop` 还是 `web`，看你的 DSH 怎么起的——如果你是通过桌面客户端用的，就是 `desktop`。
